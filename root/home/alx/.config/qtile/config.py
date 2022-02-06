@@ -26,7 +26,7 @@
 import os
 import subprocess
 from typing import List  # noqa: F401
-from libqtile import bar, layout, widget, hook
+from libqtile import bar, layout, widget, hook, extension
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
@@ -85,11 +85,12 @@ keys = [
     Key([mod], "r", lazy.spawncmd(),
         desc="Spawn a command using a prompt widget"),
 
-    #stuff
+    #Custom Keys
     Key([mod], 'b', lazy.spawn('brave')),
     Key([mod], 'n', lazy.spawn('nautilus')),
     Key([mod], 'm', lazy.spawn('dolphin')),
     Key([mod], 'v', lazy.spawn('atom')),
+    Key([mod], 'd', lazy.spawn('dmenu_run')),
 ]
 
 groups = [Group(i) for i in "123456789"]
