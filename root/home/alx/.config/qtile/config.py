@@ -82,15 +82,15 @@ keys = [
 
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod], "r", lazy.spawncmd(),
-        desc="Spawn a command using a prompt widget"),
+    # Key([mod], "r", lazy.spawncmd(),
+    #     desc="Spawn a command using a prompt widget"),
 
     #Custom Keys
     Key([mod], 'b', lazy.spawn('brave')),
     Key([mod], 'n', lazy.spawn('nautilus')),
     Key([mod], 'm', lazy.spawn('dolphin')),
     Key([mod], 'v', lazy.spawn('atom')),
-    Key([mod], 'd', lazy.spawn('dmenu_run')),
+    Key([mod], 'r', lazy.spawn('rofi -show run')),
 ]
 
 groups = [Group(i) for i in "123456789"]
