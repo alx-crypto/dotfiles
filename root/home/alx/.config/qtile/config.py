@@ -87,8 +87,8 @@ keys = [
 
     #Custom Keys
     Key([mod], 'b', lazy.spawn('brave')),
-    Key([mod], 'n', lazy.spawn('nautilus')),
-    Key([mod], 'm', lazy.spawn('dolphin')),
+    Key([mod], 'n', lazy.spawn('nemo')),
+    #Key([mod], 'm', lazy.spawn('dolphin')),
     Key([mod], 'v', lazy.spawn('atom')),
     Key([mod], 'r', lazy.spawn('rofi -show run')),
 ]
