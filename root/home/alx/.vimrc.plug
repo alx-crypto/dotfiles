@@ -1,0 +1,7 @@
+call plug#begin('~/.vim/plugged')
+
+"Fugitive Vim Github Wrapper
+Plug 'tpope/vim-fugitive'
+Plug 'preservim/nerdtree'
+Plug 'rust-lang/rust.vim'
+call plug#end()
