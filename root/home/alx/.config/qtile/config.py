@@ -88,7 +88,7 @@ keys = [
     #Custom Keys
     Key([mod], 'b', lazy.spawn('brave')),
     Key([mod], 'n', lazy.spawn('nemo')),
-    #Key([mod], 'm', lazy.spawn('dolphin')),
+    Key([mod], 'm', lazy.spawn('kitty ranger')),
     Key([mod], 'v', lazy.spawn('atom')),
     Key([mod], 'r', lazy.spawn('rofi -show run')),
 ]
@@ -148,13 +148,13 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.Systray(padding=7, background='232530'),
-                widget.TextBox(padding=0, fontsize=24, background='232530', text=''),
+                #widget.TextBox(padding=0, fontsize=24, background='232530', text=''),
                 widget.Wlan(padding=7, background='232530', format='{essid} {quality}/70'),
                 widget.Battery(padding=7, background='232530'),
                 widget.Volume(padding=7, background='232530'),
                 #widget.Clock(padding=7, format="%Y-%m-%d %a %I:%M %p"),
                 widget.Clock(padding=7, format='%d-%m-%Y %a %I:%M %p', background='232530'),
-                widget.QuickExit(padding=7, background='232530'),
+                #widget.QuickExit(padding=7, background='232530'),
             ],
             24,
             # border_width=[0, 0, 1, 0],  # Draw top and bottom borders
