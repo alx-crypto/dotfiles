@@ -89,8 +89,10 @@ keys = [
     Key([mod], 'b', lazy.spawn('brave')),
     Key([mod], 'n', lazy.spawn('nemo')),
     Key([mod], 'm', lazy.spawn('kitty ranger')),
+    Key([mod], 's', lazy.spawn('kitty btop')),
     Key([mod], 'v', lazy.spawn('atom')),
     Key([mod], 'r', lazy.spawn('rofi -show run')),
+    Key([mod], 't', lazy.spawn('rofi -show window')),
 ]
 
 groups = [Group(i) for i in "123456789"]
@@ -137,7 +139,7 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.CurrentLayout(background='232530'),
+                widget.Image(background='232530', padding=10 , filename='~/.config/qtile/alt.png'),
                 widget.GroupBox(background='232530'),
                 widget.Prompt(background='232530'),
                 widget.WindowName(background='232530'),
@@ -147,14 +149,13 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.Systray(padding=7, background='232530'),
-                #widget.TextBox(padding=0, fontsize=24, background='232530', text=''),
-                widget.Wlan(padding=7, background='232530', format='{essid} {quality}/70'),
-                widget.Battery(padding=7, background='232530'),
-                widget.Volume(padding=7, background='232530'),
-                #widget.Clock(padding=7, format="%Y-%m-%d %a %I:%M %p"),
-                widget.Clock(padding=7, format='%d-%m-%Y %a %I:%M %p', background='232530'),
-                #widget.QuickExit(padding=7, background='232530'),
+                widget.Systray(padding=10, background='232530', opacity='0.75'),
+                widget.Volume(padding=10, background='232530', opacity='0.75'),
+                widget.Clock(padding=10, format='%d-%m-%Y %a %I:%M %p', background='232530', opacity='0.75'),
+                widget.CurrentLayout(background='232530'),
+                #notebook stuff
+                widget.Battery(padding=10, background='232530', opacity='0.75'),
+                #widget.Wlan(padding=7, background='232530', format='{essid} {quality}/70'),
             ],
             24,
             # border_width=[0, 0, 1, 0],  # Draw top and bottom borders
