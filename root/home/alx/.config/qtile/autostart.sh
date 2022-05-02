@@ -7,6 +7,6 @@ xautolock -detectsleep -time 30 -locker "i3lock -i /usr/share/backgrounds/archli
 #nm-applet &
 blueberry-tray &
 #cmst &
-#connman-gtk &
+connman-gtk &
 redshift -l 1:1 &
 corectrl &
